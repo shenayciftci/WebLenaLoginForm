@@ -1,0 +1,40 @@
+﻿@using WebLenaLoginForm.Models
+@model List<Form>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>Form ID</th>
+        <th>Form Adı</th>
+        <th>Açıklama</th>
+        <th>Oluşturan İsim</th>
+        <th>Oluşturan Soyisim</th>
+        <th>Oluşturan Yaş</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+
+
+    </tr>
+    @foreach (var y in Model)
+    {
+        <tr>
+            <td>@y.FormId</td>
+            <td>@y.FormName</td>
+            <td>@y.Description</td>
+            <td>@y.Name</td>
+            <td>@y.Surname</td>
+            <td>@y.Age</td>
+
+            <td> <a href="#" class="btn btn-danger" > Sil  </a> </td>
+            <td> <a href="#" class="btn btn-success"> Güncelleme </a> </td>
+
+        </tr>
+    }
+</table>
+<a href="/Form/YeniForm/" class="btn btn-primary"> Yeni Form Ekle</a>
+

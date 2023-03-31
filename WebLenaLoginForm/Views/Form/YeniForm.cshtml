@@ -1,0 +1,33 @@
+﻿@model WebLenaLoginForm.Models.Form
+
+@{
+    ViewData["Title"] = "YeniForm";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<br />
+
+<form class="form-group" method="post">
+
+    Form Adı
+    @Html.TextBoxFor(x=>x.FormName, new {@class= "form-control"})
+
+    <br />
+    Açıklama
+    @Html.TextBoxFor(x=>x.Description, new {@class= "form-control"})
+
+    <br />
+    Ad
+    @Html.TextBoxFor(x=>x.Name, new {@class= "form-control"})
+
+    <br />
+    Soyad
+    @Html.TextBoxFor(x=>x.Surname, new {@class= "form-control"})
+
+    <br />
+    Yaş
+    @Html.TextBoxFor(x=>x.Age, new {@class= "form-control"})
+    <br />
+    <button class="btn btn-info"> Kaydet </button>
+
+</form>
+
